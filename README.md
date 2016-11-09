@@ -5,10 +5,10 @@ Claymore's ZCash AMD GPU Miner
 
 LINKS:
 
-v 1.0:
+v 3.0:
 GOOGLE: https://drive.google.com/drive/folders/0B69wv2iqszefdmJickl5MF9BOEE?usp=sharing
 MEGA: https://mega.nz/#F!P0ZjFDjC!Cmb-ZRqlbAnNrajRtp4zvA
-GitHub: https://github.com/nanopool/ClaymoreZECMiner/releases/download/v1.0/Claymore.s.ZCash.AMD.GPU.Miner.v1.0.zip
+GitHub: https://github.com/nanopool/ClaymoreZECMiner/releases/download/v3.0/Claymore.s.ZCash.AMD.GPU.Miner.v3.0.Beta.zip
 
 
 
@@ -43,6 +43,8 @@ COMMAND LINE OPTIONS:
    Pools that require "Login.Worker" instead of wallet address are not supported directly currently, but you can use "-allpools 1" option to mine there.
 
 -zpsw    Password for ZCash pool, use "x" as password.
+
+-i   mining intensity. Possible values: 0, 1, 2. 0 - lowest intensity and CPU usage, 2 - maximal intensity. You can also specify values for every card, for example "-i 0,2,1".
 
 -allpools Specify "-allpools 1" if miner does not want to mine on specified pool (because it cannot mine devfee on that pool), but you agree to use some default pools for devfee mining. 
    Note that if devfee mining pools will stop, entire mining will be stopped too.
