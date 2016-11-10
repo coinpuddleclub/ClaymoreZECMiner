@@ -3,6 +3,15 @@ Claymore's ZCash AMD GPU Miner
 
 =========================
 
+Latest version v4.0:
+
+- improved speed by about 20% (depends on card model). Up to 100H/s on stock 390X on "-i 2" mode.
+- added "-retrydelay" option.
+- added "-nofee" option.
+- various bug fixes.
+- changed coloring.
+- EthMan: added "View miner console" command.
+
 Latest version v3.0-3.1:
 
 - improved speed by 20-30% (depends on card model). Up to 80H/s on stock 390X on "-i 2" mode.
@@ -10,10 +19,10 @@ Latest version v3.0-3.1:
 
 LINKS:
 
-v 3.1:
+v 4.0:
 GOOGLE: https://drive.google.com/drive/folders/0B69wv2iqszefdmJickl5MF9BOEE?usp=sharing
 MEGA: https://mega.nz/#F!P0ZjFDjC!Cmb-ZRqlbAnNrajRtp4zvA
-GitHub: https://github.com/nanopool/ClaymoreZECMiner/releases/download/v3.1/Claymore.s.ZCash.AMD.GPU.Miner.v3.1.Beta.zip
+GitHub: https://github.com/nanopool/ClaymoreZECMiner/releases/download/v4.0/Claymore.s.ZCash.AMD.GPU.Miner.v4.0.Beta.zip
 
 
 
@@ -44,14 +53,14 @@ COMMAND LINE OPTIONS:
 
 -zpool    ZCash pool address. Only Stratum protocol is supported.
 
--zwal    Your ZCash wallet address. Also worker name and other options if pool supports it. 
+-zwal    Your ZCash wallet address. Also worker name and other options if pool supports it.
    Pools that require "Login.Worker" instead of wallet address are not supported directly currently, but you can use "-allpools 1" option to mine there.
 
 -zpsw    Password for ZCash pool, use "x" as password.
 
 -i   mining intensity. Possible values: 0, 1, 2. 0 - lowest intensity and CPU usage, 2 - maximal intensity. You can also specify values for every card, for example "-i 0,2,1".
 
--allpools Specify "-allpools 1" if miner does not want to mine on specified pool (because it cannot mine devfee on that pool), but you agree to use some default pools for devfee mining. 
+-allpools Specify "-allpools 1" if miner does not want to mine on specified pool (because it cannot mine devfee on that pool), but you agree to use some default pools for devfee mining.
    Note that if devfee mining pools will stop, entire mining will be stopped too.
 
 -di    GPU indexes, default is all available GPUs. For example, if you have four GPUs "-di 02" will enable only first and third GPUs (#0 and #2).
@@ -63,18 +72,26 @@ COMMAND LINE OPTIONS:
 -wd    watchdog option. Default value is "-wd 1", it enables watchdog, miner will be closed (or restarted, see "-r" option) if any thread is not responding for 1 minute or OpenCL call failed.
    Specify "-wd 0" to disable watchdog.
 
--r   Restart miner mode. "-r 0" (default) - restart miner if something wrong with GPU. "-r -1" - disable automatic restarting. -r >20 - restart miner if something 
+-r   Restart miner mode. "-r 0" (default) - restart miner if something wrong with GPU. "-r -1" - disable automatic restarting. -r >20 - restart miner if something
    wrong with GPU or by timer. For example, "-r 60" - restart miner every hour or when some GPU failed.
-   "-r 1" closes miner and execute "reboot.bat" file ("reboot.bash" or "reboot.sh" for Linux version) in the miner directory (if exists) if some GPU failed. 
+   "-r 1" closes miner and execute "reboot.bat" file ("reboot.bash" or "reboot.sh" for Linux version) in the miner directory (if exists) if some GPU failed.
    So you can create "reboot.bat" file and perform some actions, for example, reboot system if you put this line there: "shutdown /r /t 5 /f".
 
--dbg   debug log and messages. "-dbg 0" - (default) create log file but don't show debug messages. 
+-retrydelay   delay, in seconds, between connection attempts. Default values is "20". Specify "-retrydelay -1" if you don't need reconnection, in this mode miner will exit if connection is lost.
+
+-dbg   debug log and messages. "-dbg 0" - (default) create log file but don't show debug messages.
    "-dbg 1" - create log file and show debug messages. "-dbg -1" - no log file and no debug messages.
 
 -logfile debug log file name. After restart, miner will append new log data to the same file. If you want to clear old log data, file name must contain "noappend" string.
    If missed, default file name will be used.
 
--li   low intensity mode. Reduces mining intensity, useful if your cards are overheated. Note that mining speed is reduced too. 
+-nofee: set "1" to cancel my developer fee at all. In this mode some recent optimizations are disabled so mining speed will be slower by about 5%.
+   By enabling this mode, I will lose 100% of my earnings, you will lose only 2.5% of your earnings.
+   So you have a choice: "fastest miner" or "completely free miner but a bit slower".
+   If you want both "fastest" and "completely free" you should find some other miner that meets your requirements, just don't use this miner instead of claiming that I need
+   to cancel/reduce developer fee, saying that 2.5% developer fee is too much for this miner and so on.
+
+-li   low intensity mode. Reduces mining intensity, useful if your cards are overheated. Note that mining speed is reduced too.
    More value means less heat and mining speed, for example, "-li 10" is less heat and mining speed than "-li 1". You can also specify values for every card, for example "-li 3,10,50".
    Default value is "0" - no low intensity mode.
 
@@ -113,7 +130,7 @@ COMMAND LINE OPTIONS:
 
 -mvddc   set target GPU memory voltage, multiplied by 1000. For example, "-mvddc 1050" means 1.05V. You can also specify values for every card, for example "-mvddc 900,950,1000,970". Supports latest AMD 4xx cards only in Windows.
 
--mport   remote monitoring/management port. Default port is 3333, specify "-mport 0" to disable remote monitoring/management feature. 
+-mport   remote monitoring/management port. Default port is 3333, specify "-mport 0" to disable remote monitoring/management feature.
    Specify negative value to enable monitoring (get statistics) but disable management (restart, uploading files), for example, "-mport -3333" enables port 3333 for remote monitoring, but remote management will be blocked.
    You can also use your web browser to see current miner state, for example, type "localhost:3333" in web browser.
 
