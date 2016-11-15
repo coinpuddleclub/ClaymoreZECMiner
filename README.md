@@ -3,6 +3,12 @@ Claymore's ZCash AMD GPU Miner
 
 =========================
 
+Latest version v6.0:
+
+- improved speed by about 20-25% (depends on card model). About 180H/s on stock 390.
+- "-i" parameter values are 0...4 now, default value is "-i 4".
+- fixed issue with mixed cards.
+
 Latest version v5.0:
 
 - improved speed by about 30-50% (depends on card model). About 145H/s on stock 390X.
@@ -25,10 +31,10 @@ Latest version v3.0-3.1:
 
 LINKS:
 
-v 5.0:
+v 6.0:
 GOOGLE: https://drive.google.com/drive/folders/0B69wv2iqszefdmJickl5MF9BOEE?usp=sharing
 MEGA: https://mega.nz/#F!P0ZjFDjC!Cmb-ZRqlbAnNrajRtp4zvA
-GitHub: https://github.com/nanopool/ClaymoreZECMiner/releases/download/v5.0/Claymore.s.ZCash.AMD.GPU.Miner.v5.0.Beta.zip
+GitHub: https://github.com/nanopool/ClaymoreZECMiner/releases/download/v6.0/Claymore.s.ZCash.AMD.GPU.Miner.v6.0.Beta.zip
 
 
 
