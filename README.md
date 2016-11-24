@@ -2,6 +2,12 @@
 Claymore's ZCash AMD GPU Miner
 
 =========================
+Latest version v8.0:
+
+- improved speed by about 15-25% (depends on card model). Up to 300H/s on stock 390X.
+- added "-i 5" and "-i 6" values, 1-2% speedup, but can be unstable in some cases.
+- now remote management is working in read-only mode by default.
+- some bug fixes and minor improvements.
 
 Latest version v7.0:
 
