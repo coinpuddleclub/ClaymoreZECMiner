@@ -42,10 +42,10 @@ Latest version v3.0-3.1:
 
 LINKS:
 
-v 7.0:
+v 8.0:
 GOOGLE: https://drive.google.com/drive/folders/0B69wv2iqszefdmJickl5MF9BOEE?usp=sharing
 MEGA: https://mega.nz/#F!P0ZjFDjC!Cmb-ZRqlbAnNrajRtp4zvA
-GitHub: https://github.com/nanopool/ClaymoreZECMiner/releases/download/v7.0/Claymore.s.ZCash.AMD.GPU.Miner.v7.0.Beta.zip
+GitHub: https://github.com/nanopool/ClaymoreZECMiner/releases/download/v8.0/Claymore.s.ZCash.AMD.GPU.Miner.v8.0.Beta.zip
 
 
 
