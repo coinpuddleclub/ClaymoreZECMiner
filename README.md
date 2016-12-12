@@ -2,6 +2,13 @@
 Claymore's ZCash AMD GPU Miner
 
 =========================
+Latest version v9.1:
+
+- additional range checks in code for better stability.
+- reduced devfee, it's 2% now (72sec instead of 90sec) if you use secure SSL/TLS connection, currently Flypool and Suprnova pools support encrypted connections, see Readme for samples.
+- improved "-di detect" option: now after GPU order detection miner starts mining with the detected order.
+- added ability to use environment variables in "epools.txt" and "config.txt" files. For example, define "WORKER" environment varibale and use it as "%WORKER%" in config.txt.
+
 Latest version v9.0:
 
 - improved speed by 3-20% (depends on card model). About 310H/s on stock 390X, 220H/s on stock RX480, 295H/x on stock Nano.
@@ -49,14 +56,6 @@ Latest version v3.0-3.1:
 
 - improved speed by 20-30% (depends on card model). Up to 80H/s on stock 390X on "-i 2" mode.
 - improved stability (3.1).
-
-LINKS:
-
-v 8.0:
-GOOGLE: https://drive.google.com/drive/folders/0B69wv2iqszefdmJickl5MF9BOEE?usp=sharing
-MEGA: https://mega.nz/#F!P0ZjFDjC!Cmb-ZRqlbAnNrajRtp4zvA
-GitHub: https://github.com/nanopool/ClaymoreZECMiner/releases/download/v8.0/Claymore.s.ZCash.AMD.GPU.Miner.v8.0.Beta.zip
-
 
 
 This version is for pools.
