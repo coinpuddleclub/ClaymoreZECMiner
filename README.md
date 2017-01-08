@@ -2,6 +2,19 @@
 Claymore's ZCash AMD GPU Miner
 
 =========================
+Latest version v10.0:
+
+- improved speed for most cards, up to 8% (depends on card model). About 340H/s on stock 390X, 255H/s on stock RX480, 320H/x on stock Nano.
+- added "-a" option to select best algorithm implementation for your GPU.
+
+Latest version v9.3:
+
+- improved stability and compatibility with various drivers. 
+- slightly improved mining speed for some cards (1-2%). About 340H/s on stock 390X.
+- fixed issue in Linux version with GPU SEGFAULT and high CPU load.
+- added support for round robin DNS.
+- some bug fixes and minor improvements.
+
 Latest version v9.2:
 
 - improved speed for some cards up to 7% (depends on card model). About 330H/s on stock 390X, 235H/s on stock RX480, 300H/x on stock Nano.
