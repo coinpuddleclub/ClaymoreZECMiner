@@ -2,6 +2,13 @@
 Claymore's ZCash AMD GPU Miner
 
 =========================
+
+Latest version v11.0:
+
+- improved speed for Hawaii, Fury, Tahiti and Pitcairn cards. About 355H/s on stock 390X, 370H/s on stock Nano, 250H/s on stock 280X.
+- added faster assembler implementation kernels for these cards.
+- added "-asm" option.
+
 Latest version v10.0:
 
 - improved speed for most cards, up to 8% (depends on card model). About 340H/s on stock 390X, 255H/s on stock RX480, 320H/x on stock Nano.
