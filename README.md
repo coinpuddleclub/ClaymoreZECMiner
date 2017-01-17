@@ -3,6 +3,17 @@ Claymore's ZCash AMD GPU Miner
 
 =========================
 
+Latest version v11.1:
+
+- improved speed, about 365H/s on stock 390X, 385H/s on stock Nano, 260H/s on stock 280X, 260H/s on stock RX480.
+- improved compatibility.
+- some bug fixes and minor improvements.
+
+NOTES:
+1. It seems there is no way to get full speed on latest drivers for Fiji and Polaris cards, at least in Windows. So don't use latest drivers for Fury, use 15.12 or 16.3.2. Since old drivers don't support Polaris, there is no way to get full speed for these cards at all, at least in Windows.
+2. Tonga - currently I cannot get enough speedup from assembler for this card so I did not include assembler kernel for this card.
+
+
 Latest version v11.0:
 
 - improved speed for Hawaii, Fury, Tahiti and Pitcairn cards. About 355H/s on stock 390X, 370H/s on stock Nano, 250H/s on stock 280X.
