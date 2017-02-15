@@ -13,6 +13,9 @@ NOTES:
 1. It seems there is no way to get full speed on latest drivers for Fiji and Polaris cards, at least in Windows. So don't use latest drivers for Fury, use 15.12 or 16.3.2. Since old drivers don't support Polaris, there is no way to get full speed for these cards at all, at least in Windows.
 2. Tonga - currently I cannot get enough speedup from assembler for this card so I did not include assembler kernel for this card.
 
+Latest version v12.0:
+
+- improved speed, about 405H/s on stock 390X, 450H/s on stock Nano, 290H/s on stock 280X, 295H/s on stock RX480.
 
 Latest version v11.0:
 
