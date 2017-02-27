@@ -3,6 +3,12 @@ Claymore's ZCash AMD GPU Miner
 
 =========================
 
+Latest version v12.2:
+
+- fixed issue with "-ttli" option.
+- improved "-mport" option, now you can specify network adapter IP for incoming connections for remote management.
+- added "-old 1" option, try to use it if v12.0 works stable for you, but v12.1 is unstable.
+
 Latest version v12.1:
 
 - slightly improved speed for some cards, about 410H/s on stock 390X, 450H/s on stock Nano, 290H/s on stock 280X, 300H/s on stock RX480.
