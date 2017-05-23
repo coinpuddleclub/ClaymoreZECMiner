@@ -3,6 +3,14 @@ Claymore's ZCash AMD GPU Miner
 
 =========================
 
+Latest version v12.5:
+
+- added support for latest ZCash forks.
+- improved fans management for latest drivers and Polaris cards.
+- added "-mpsw" option.
+- added shares-per-GPU statistics when "s" key is pressed.
+- Included EthMan v3.0 which supports passwords and email notifications.
+
 Latest version v12.4:
 
 - slightly improved speed for some cards (1-2%).
