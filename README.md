@@ -1,7 +1,7 @@
 # ClaymoreZECMiner
 Claymore's ZCash AMD GPU Miner
 
-=========================
+==========================
 
 Latest version v12.6:
 
